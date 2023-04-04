@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/03/16 16:23:37.000.756,=C:\Users\33749\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2023/03/16 16:24:25.000.992,C:\Users\33749\Documents\Embarcadero\Studio\Projets\Unit1.pas=C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\Unit1.pas</Transaction>
+    <Transaction>2023/03/16 16:24:25.000.992,C:\Users\33749\Documents\Embarcadero\Studio\Projets\Unit1.fmx=C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\Unit1.fmx</Transaction>
+    <Transaction>2023/03/16 16:24:37.000.950,C:\Users\33749\Documents\Embarcadero\Studio\Projets\Project1.dproj=C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\TeleBot.dproj</Transaction>
+    <Transaction>2023/03/16 16:29:35.000.351,=C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\TAPI\fastTelega.AvailableTypes.pas</Transaction>
+    <Transaction>2023/03/16 16:29:35.000.467,=C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\TAPI\fastTelega.LongPoll.pas</Transaction>
+    <Transaction>2023/03/16 16:29:35.000.405,=C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\TAPI\fastTelega.EventBroadcaster.pas</Transaction>
+    <Transaction>2023/03/16 16:29:35.000.429,=C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\TAPI\fastTelega.HttpClient.pas</Transaction>
+    <Transaction>2023/03/16 16:29:35.000.489,=C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\TAPI\fastTelega.TypeParser.pas</Transaction>
+    <Transaction>2023/03/16 16:29:35.000.364,=C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\TAPI\fastTelega.Bot.pas</Transaction>
+    <Transaction>2023/03/16 16:29:35.000.417,=C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\TAPI\fastTelega.EventHandler.pas</Transaction>
+    <Transaction>2023/03/16 16:29:35.000.327,=C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\TAPI\fastTelega.API.pas</Transaction>
+    <Transaction>2023/03/18 15:03:25.000.394,=C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>
