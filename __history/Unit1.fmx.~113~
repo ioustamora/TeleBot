@@ -1,0 +1,659 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'TeleBot v0.1'
+  ClientHeight = 571
+  ClientWidth = 843
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object GroupBox1: TGroupBox
+    Align = Top
+    Padding.Left = 8.000000000000000000
+    Padding.Top = 18.000000000000000000
+    Padding.Right = 8.000000000000000000
+    Padding.Bottom = 8.000000000000000000
+    Size.Width = 843.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'telegram bot api key'
+    TabOrder = 2
+    object Button1: TButton
+      Align = Right
+      Cursor = crHandPoint
+      Position.X = 755.000000000000000000
+      Position.Y = 18.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Start Bot!'
+      OnClick = Button1Click
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 38
+      Text = ''
+      Size.Width = 747.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object GroupBox2: TGroupBox
+    Align = Right
+    Padding.Left = 8.000000000000000000
+    Padding.Top = 18.000000000000000000
+    Padding.Right = 8.000000000000000000
+    Padding.Bottom = 8.000000000000000000
+    Position.X = 512.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 331.000000000000000000
+    Size.Height = 500.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'bot log'
+    TabOrder = 4
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      Align = Client
+      Size.Width = 315.000000000000000000
+      Size.Height = 212.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 311.000000000000000000
+      Viewport.Height = 208.000000000000000000
+    end
+    object GroupBox9: TGroupBox
+      Align = Bottom
+      Padding.Left = 8.000000000000000000
+      Padding.Top = 18.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Padding.Bottom = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 230.000000000000000000
+      Size.Width = 315.000000000000000000
+      Size.Height = 130.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'send message'
+      TabOrder = 39
+      object Panel3: TPanel
+        Align = Client
+        Size.Width = 299.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 38
+        object Button5: TButton
+          Align = Right
+          Cursor = crHandPoint
+          Hint = 'send message'
+          Images = ImageList1
+          ImageIndex = 0
+          Position.X = 275.000000000000000000
+          Size.Width = 24.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnClick = Button5Click
+        end
+        object Memo8: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          OnChange = Memo8Change
+          Align = Client
+          Enabled = False
+          Size.Width = 275.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 38
+          Viewport.Width = 271.000000000000000000
+          Viewport.Height = 69.000000000000000000
+        end
+      end
+      object Panel4: TPanel
+        Align = Top
+        Position.X = 8.000000000000000000
+        Position.Y = 18.000000000000000000
+        Size.Width = 299.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 39
+        object Label4: TLabel
+          Align = Left
+          Margins.Left = 8.000000000000000000
+          Position.X = 8.000000000000000000
+          Size.Width = 33.000000000000000000
+          Size.Height = 31.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Chat:'
+          TabOrder = 0
+        end
+        object ComboBox1: TComboBox
+          Align = Client
+          Hint = 'select chat id'
+          Size.Width = 258.000000000000000000
+          Size.Height = 31.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 37
+          OnChange = ComboBox1Change
+        end
+      end
+    end
+    object GroupBox11: TGroupBox
+      Align = Bottom
+      Padding.Left = 8.000000000000000000
+      Padding.Top = 18.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Padding.Bottom = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 360.000000000000000000
+      Size.Width = 315.000000000000000000
+      Size.Height = 88.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'send file'
+      TabOrder = 38
+      object Panel1: TPanel
+        Align = Top
+        Position.X = 8.000000000000000000
+        Position.Y = 18.000000000000000000
+        Size.Width = 299.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 39
+        object Label2: TLabel
+          Align = Left
+          Margins.Left = 8.000000000000000000
+          Position.X = 8.000000000000000000
+          Size.Width = 37.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Chat:'
+          TabOrder = 0
+        end
+        object ComboBox2: TComboBox
+          Align = Client
+          Hint = 'select chat id'
+          Size.Width = 254.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 37
+          OnChange = ComboBox1Change
+        end
+      end
+      object Panel2: TPanel
+        Align = Top
+        Position.X = 8.000000000000000000
+        Position.Y = 51.000000000000000000
+        Size.Width = 299.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 38
+        object Label3: TLabel
+          Align = Left
+          Margins.Left = 8.000000000000000000
+          Position.X = 8.000000000000000000
+          Size.Width = 37.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'File:'
+          TabOrder = 1
+        end
+        object Button4: TButton
+          Align = Client
+          Enabled = False
+          Hint = 'send photo or file'
+          Images = ImageList1
+          ImageIndex = 0
+          Size.Width = 254.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 38
+          Text = 'send file'
+          OnClick = Button4Click
+        end
+      end
+    end
+    object Panel5: TPanel
+      Align = Bottom
+      Position.X = 8.000000000000000000
+      Position.Y = 448.000000000000000000
+      Size.Width = 315.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 40
+      object Button2: TButton
+        Align = Bottom
+        Cursor = crHandPoint
+        Size.Width = 315.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 37
+        Text = 'open send message'
+        OnClick = Button2Click
+      end
+      object Button3: TButton
+        Align = Bottom
+        Position.Y = 22.000000000000000000
+        Size.Width = 315.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 39
+        Text = 'open send photo/file'
+        OnClick = Button3Click
+      end
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 512.000000000000000000
+    Size.Height = 500.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 5
+    TabPosition = PlatformDefault
+    Sizes = (
+      512s
+      474s
+      512s
+      474s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 79.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'commands'
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object ListView1: TListView
+        ItemAppearanceClassName = 'TDynamicAppearance'
+        ItemEditAppearanceClassName = 'TDynamicAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Position.X = 480.000000000000000000
+        Position.Y = 152.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+          item
+            AppearanceObjectName = 'Text1'
+            AppearanceClassName = 'TTextObjectAppearance'
+          end>
+        ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+          item
+            AppearanceObjectName = 'Text1'
+            AppearanceClassName = 'TTextObjectAppearance'
+          end>
+      end
+      object VertScrollBox1: TVertScrollBox
+        Align = Client
+        Size.Width = 512.000000000000000000
+        Size.Height = 474.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 496.000000000000000000
+        Viewport.Height = 474.000000000000000000
+        object GroupBox3: TGroupBox
+          Align = Top
+          Padding.Left = 8.000000000000000000
+          Padding.Top = 18.000000000000000000
+          Padding.Right = 8.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Size.Width = 496.000000000000000000
+          Size.Height = 153.000000000000000000
+          Size.PlatformDefault = False
+          Text = '/start'
+          TabOrder = 6
+          object Memo2: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Lines.Strings = (
+              'Hi! I'#39'am a simple telegram bot autoresponder.'
+              ''
+              'You can edit this info as you wish. '
+              'Provide your users with best starting info how to use this bot. '
+              'Print coolest updates and actual news.'
+              ''
+              'Use /help command to get more info')
+            Align = Client
+            Size.Width = 480.000000000000000000
+            Size.Height = 127.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 38
+            Viewport.Width = 476.000000000000000000
+            Viewport.Height = 123.000000000000000000
+          end
+        end
+        object GroupBox4: TGroupBox
+          Align = Top
+          Padding.Left = 8.000000000000000000
+          Padding.Top = 18.000000000000000000
+          Padding.Right = 8.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Position.Y = 765.000000000000000000
+          Size.Width = 496.000000000000000000
+          Size.Height = 153.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'any other command'
+          TabOrder = 5
+          object Memo3: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Lines.Strings = (
+              'if user sends to this bot any latin word starting with slash'
+              'like /{word} - bot will answer with this text')
+            Align = Client
+            Size.Width = 480.000000000000000000
+            Size.Height = 127.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 37
+            Viewport.Width = 480.000000000000000000
+            Viewport.Height = 127.000000000000000000
+          end
+        end
+        object GroupBox5: TGroupBox
+          Align = Top
+          Padding.Left = 8.000000000000000000
+          Padding.Top = 18.000000000000000000
+          Padding.Right = 8.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Position.Y = 612.000000000000000000
+          Size.Width = 496.000000000000000000
+          Size.Height = 153.000000000000000000
+          Size.PlatformDefault = False
+          Text = '/stop'
+          TabOrder = 4
+          object Memo4: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Lines.Strings = (
+              'last words to youser after the end of work) '
+              'thanks and buy!')
+            Align = Client
+            Size.Width = 480.000000000000000000
+            Size.Height = 127.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 37
+            Viewport.Width = 480.000000000000000000
+            Viewport.Height = 127.000000000000000000
+          end
+        end
+        object GroupBox6: TGroupBox
+          Align = Top
+          Padding.Left = 8.000000000000000000
+          Padding.Top = 18.000000000000000000
+          Padding.Right = 8.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Position.Y = 459.000000000000000000
+          Size.Width = 496.000000000000000000
+          Size.Height = 153.000000000000000000
+          Size.PlatformDefault = False
+          Text = '/help'
+          TabOrder = 3
+          object Memo5: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Lines.Strings = (
+              
+                'Best ways to use this bot. How to clime your deals. How to use c' +
+                'ommands. '
+              'Link to other command like /start.'
+              '/info - type this to get more info'
+              '/order - heare is order info page'
+              '/stop - stop chat and get exit info')
+            Align = Client
+            Size.Width = 480.000000000000000000
+            Size.Height = 127.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 38
+            Viewport.Width = 480.000000000000000000
+            Viewport.Height = 127.000000000000000000
+          end
+        end
+        object GroupBox7: TGroupBox
+          Align = Top
+          Padding.Left = 8.000000000000000000
+          Padding.Top = 18.000000000000000000
+          Padding.Right = 8.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Position.Y = 306.000000000000000000
+          Size.Width = 496.000000000000000000
+          Size.Height = 153.000000000000000000
+          Size.PlatformDefault = False
+          Text = '/order'
+          TabOrder = 2
+          object Memo6: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Lines.Strings = (
+              'How to order your products or servises.')
+            Align = Client
+            Size.Width = 480.000000000000000000
+            Size.Height = 127.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 38
+            Viewport.Width = 476.000000000000000000
+            Viewport.Height = 123.000000000000000000
+          end
+        end
+        object GroupBox8: TGroupBox
+          Align = Top
+          Padding.Left = 8.000000000000000000
+          Padding.Top = 18.000000000000000000
+          Padding.Right = 8.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Position.Y = 153.000000000000000000
+          Size.Width = 496.000000000000000000
+          Size.Height = 153.000000000000000000
+          Size.PlatformDefault = False
+          Text = '/info'
+          TabOrder = 1
+          object Memo7: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Lines.Strings = (
+              'Print heare some info about you or your products/servises.')
+            Align = Client
+            Size.Width = 480.000000000000000000
+            Size.Height = 127.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 38
+            Viewport.Width = 476.000000000000000000
+            Viewport.Height = 123.000000000000000000
+          end
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 136.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'questions / responses'
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object StringGrid1: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 512.000000000000000000
+        Size.Height = 282.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Options = [Editing, AlwaysShowEditor, ColumnResize, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
+        Viewport.Width = 508.000000000000000000
+        Viewport.Height = 257.000000000000000000
+      end
+      object BindNavigator1: TBindNavigator
+        Align = Bottom
+        Position.Y = 449.000000000000000000
+        Size.Width = 512.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        DataSource = BindSourceDB1
+        xRadius = 4.000000000000000000
+        yRadius = 4.000000000000000000
+      end
+      object GroupBox10: TGroupBox
+        Align = Bottom
+        Padding.Left = 8.000000000000000000
+        Padding.Top = 18.000000000000000000
+        Padding.Right = 8.000000000000000000
+        Padding.Bottom = 8.000000000000000000
+        Position.Y = 282.000000000000000000
+        Size.Width = 512.000000000000000000
+        Size.Height = 167.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'response'
+        TabOrder = 0
+        object Memo9: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          Align = Client
+          Size.Width = 496.000000000000000000
+          Size.Height = 141.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 38
+          Viewport.Width = 492.000000000000000000
+          Viewport.Height = 137.000000000000000000
+        end
+      end
+    end
+  end
+  object StatusBar1: TStatusBar
+    Position.Y = 549.000000000000000000
+    ShowSizeGrip = True
+    Size.Width = 843.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    object Label1: TLabel
+      Align = Left
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 2.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 2.000000000000000000
+      Size.Width = 801.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      Text = 
+        'This is demo version. You can start it on own bot api key. You c' +
+        'an edit some content. But you can'#39't save data.'
+      TabOrder = 0
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Title = 'Select Photo or Document to send...'
+    Left = 656
+    Top = 353
+  end
+  object ClientDataSet1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 608
+    Top = 104
+    object ClientDataSet1question: TStringField
+      FieldName = 'question'
+      Size = 255
+    end
+    object ClientDataSet1response: TStringField
+      FieldName = 'response'
+      Size = 255
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = ClientDataSet1
+    ScopeMappings = <>
+    Left = 720
+    Top = 160
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 684
+    Top = 101
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      FieldName = 'response'
+      Control = Memo9
+      Track = False
+    end
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid1
+      Columns = <>
+    end
+  end
+  object ImageList1: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              02B1494441546843ED99C972D34010867B543970B0CC0D1FB138F15824840052
+              626723EC84B013B218072BA910AA781D9E42F635B7583E1A0D3D49DB920B6ACA
+              1ACD0CA98ABE8BA65B55F6FF77B776282929B9E2DCEA9CCDD6C3FE2E85D661B4
+              55A21EC60D361CB6606686251C4E7AA795FBB0C512DA6D0587B6B9A977E2E648
+              BC881D06F35E6D70049C172A4A5E940D3006B747E233DCF30EE36D5A5B41BD5A
+              58692F8C5BE8A4419994048EA3A0F200F771CA18A358BB2F8109E5113A07C545
+              BEBB8C46DA9449716001C769DFF43151CC8040660258133BB4478111F455478C
+              D361FC157F728932299CB7A2A0BA4291568A776084E8C443B7896A0F2893C2D8
+              325EEC8C7442FF7C4A3AC181EF77FDEA2A855A307380A1899B61DC76185BA4CC
+              1834B18726D6282C8CBE11CA82E3D4F3DD46C2F937CA8C61C056EB9DFE0E8585
+              317A8A937682F3DD6E505DA75019B306041213B87327F2AB8F2850C2CC0865A1
+              71E249D2A14C06B6EE758ADD3B99EFC008EC04CEFE01739C8032291CBE4481BB
+              41512EEC1910C84C006CE315FD31ADA7C6FC0865C171C20377E9DFE3041B384E
+              AF693D35760D108CB1DFB49C84C1355A4D8DDD11DAE44EBD3638C63FBD4B9914
+              0E5B781CE4EE803D0342FC8DC1777C929BA34C963738FF9BB4CE851D0332F11C
+              DE62E55F51941BF3060C8A1798352017FF0EC5BFA44819730624E2F121F97DD7
+              775F50580833062C8917E83720C4D70627F8C3B39419C3397CE806EE730AB5A0
+              D7804C3CC047ACFC330AB5A1CF80BCF29FB0F24F29D48A1E03FF49BCA0B80114
+              EFD5063F7075E72231C167BCC23EA1B5118A199089E7BC7DFEC20BEF40296304
+              75039740BC40F9761AC58B7BFABFC48B0F1DD1A9BB6243BC40D9409224BF0086
+              135F63C46B949E5F59B0F99546D9406FF1FA4FC69DF991890BF16EC356E5B5E1
+              8567735ED86FE3DCEB39259794945C2500FE00F0C52B9312BD3A900000000049
+              454E44AE426082}
+            FileName = 
+              'C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\Forw' +
+              'ard_48px.png'
+          end>
+        Name = 'Item 0'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'Item 0'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end>
+    Left = 576
+    Top = 208
+  end
+end
