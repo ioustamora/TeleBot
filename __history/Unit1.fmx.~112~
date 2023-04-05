@@ -88,12 +88,16 @@ object Form1: TForm1
         TabOrder = 38
         object Button5: TButton
           Align = Right
-          Position.X = 249.000000000000000000
-          Size.Width = 50.000000000000000000
+          Cursor = crHandPoint
+          Hint = 'send message'
+          Images = ImageList1
+          ImageIndex = 0
+          Position.X = 275.000000000000000000
+          Size.Width = 24.000000000000000000
           Size.Height = 73.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Text = 'send'
+          OnClick = Button5Click
         end
         object Memo8: TMemo
           Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
@@ -101,11 +105,11 @@ object Form1: TForm1
           OnChange = Memo8Change
           Align = Client
           Enabled = False
-          Size.Width = 249.000000000000000000
+          Size.Width = 275.000000000000000000
           Size.Height = 73.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 38
-          Viewport.Width = 245.000000000000000000
+          Viewport.Width = 271.000000000000000000
           Viewport.Height = 69.000000000000000000
         end
       end
@@ -200,11 +204,15 @@ object Form1: TForm1
         object Button4: TButton
           Align = Client
           Enabled = False
+          Hint = 'send photo or file'
+          Images = ImageList1
+          ImageIndex = 0
           Size.Width = 254.000000000000000000
           Size.Height = 33.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 38
-          Text = 'Send File'
+          Text = 'send file'
+          OnClick = Button4Click
         end
       end
     end
@@ -551,6 +559,11 @@ object Form1: TForm1
       TabOrder = 0
     end
   end
+  object OpenDialog1: TOpenDialog
+    Title = 'Select Photo or Document to send...'
+    Left = 656
+    Top = 353
+  end
   object ClientDataSet1: TClientDataSet
     Aggregates = <>
     Params = <>
@@ -589,5 +602,58 @@ object Form1: TForm1
       GridControl = StringGrid1
       Columns = <>
     end
+  end
+  object ImageList1: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              02B0494441546843ED99C972D34010867B940B07CBDCF0118B138F4542082025
+              7636C24E083B218BE360854A4215AFC353C8BEE616CB576BE849DA965C5053D6
+              68664855F45D34DDAAB2FFBFBBB5434949C935E74EE77CB61EF67729B40EA3AD
+              12F5306EB0E1B00533332CE170DA3BAB3C842D96D06E2B38B4CD4DBD133747E2
+              45EC3098F76A831FC079A1A2E445D900637077243EC303EF28DEA6B515D4AB85
+              95F6C2B8854E1A944949E0380A2A8F701FA78C318AB5FB0A98501EA10B505CE4
+              BBCB68A44D99140716709CF64D1F13C50C0864268035B1437B1418415F75C438
+              1DC507F8934B9449E1BC1505D5158AB452BC032344271EBB4D547B489914C696
+              F16267A413FAE753D2090E7CBFEB575729D48299030C4DDC0EE3B6C3D82265C6
+              A0893D34B1466161F48D50161CA79EEF3612CEBF53660C03B65AEFF477282C8C
+              D1539CB4139CEF7683EA3A85CA9835209098C09D3B915F7D4281126646280B8D
+              134F920E6532B075AF53ECDEC97C0746602770F60F99E3049449E1F02D0ADC0D
+              8A7261CF80406602601BAFE84F693D35E647280B8E131EB84BFF1E27D8C0717A
+              4BEBA9B16B80608C0D693909831BB49A1ABB23B4C99D7A6D708C7F7A9F32291C
+              B6F038C8DD017B0684F85B83137C929BA34C967738FF9BB4CE851D0332F11CDE
+              63E5DF50941BF3060C8A1798352017FF01C5BFA64819730624E2F121F963D777
+              5F51580833062C8917E83720C4D706A7F8C3B39419C3397CEA06EE4B0AB5A0D7
+              804C3CC067ACFC0B0AB5A1CF80BCF25FB0F2CF29D48A1E03FF49BCA0B80114EF
+              D5063F7175EF3231C157BCC23EA3B5118A199089E7BC7DF1C20BEF4029630475
+              035740BC40F9761AC58B7BFABFC48B0F1DD199BB6243BC40D9409224BF018613
+              5F63C46B949E5F59B0F99546D9406FF1E62FC6D9FCC8C4A578B761ABF2DAF0C2
+              F3392FECB771EEF59C924B4A4AAE13007F00BAC72B9236886378000000004945
+              4E44AE426082}
+            FileName = 
+              'C:\Users\33749\Documents\Embarcadero\Studio\Projets\TeleBot\Forw' +
+              'ard_48px.png'
+          end>
+        Name = 'Item 0'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'Item 0'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end>
+    Left = 576
+    Top = 208
   end
 end
